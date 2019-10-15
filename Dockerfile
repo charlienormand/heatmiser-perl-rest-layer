@@ -1,7 +1,6 @@
 FROM charlienormand/heatmiser-wifi-pi-docker
 RUN apk update && \
-    apk add make && \
-
+    apk add make
 RUN curl -L http://cpanmin.us | perl - App::cpanminus
 RUN cpanm Mojolicious::Lite \
 COPY heatmiser-rest.pl /heatmiser-rest.pl  
